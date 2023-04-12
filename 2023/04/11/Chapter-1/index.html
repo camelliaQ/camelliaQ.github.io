@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Vue2 与 Vue3 的对比
+Vue2 对 TypeScript 支持不友好，所有属性都放在 this 对象上。
+Vue2 架构层面对跨平台 DOM 渲染开发支持不友好。
+Vue3 的 Template 支持多个根标签，Vue2 不支持。
+Vue3 对虚拟 DOM 进行了重写、对模板的编译进行了优"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="camelliaQ"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="快速掌握 Vue3 基础语法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Vue2 与 Vue3 的对比
+Vue2 对 TypeScript 支持不友好，所有属性都放在 this 对象上。
+Vue2 架构层面对跨平台 DOM 渲染开发支持不友好。
+Vue3 的 Template 支持多个根标签，Vue2 不支持。
+Vue3 对虚拟 DOM 进行了重写、对模板的编译进行了优"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="camelliaQ Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://camelliaq.github.ioimg/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://camelliaq.github.ioimg/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>快速掌握 Vue3 基础语法 - camelliaQ Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">camelliaQ Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>快速掌握 Vue3 基础语法</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-11
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="Vue2-与-Vue3-的对比"><a href="#Vue2-与-Vue3-的对比" class="headerlink" title="Vue2 与 Vue3 的对比"></a>Vue2 与 Vue3 的对比</h2><ul>
+<li>Vue2 对 TypeScript 支持不友好，所有属性都放在 this 对象上。</li>
+<li>Vue2 架构层面对跨平台 DOM 渲染开发支持不友好。</li>
+<li>Vue3 的 Template 支持多个根标签，Vue2 不支持。</li>
+<li>Vue3 对虚拟 DOM 进行了重写、对模板的编译进行了优化。</li>
+<li>…</li>
+</ul>
+<h3 id="setup-函数"><a href="#setup-函数" class="headerlink" title="setup() 函数"></a>setup() 函数</h3><p><code>setup()</code>是 Vue3 专门为组件提供的新属性。 <code>setup()</code> 在 <code>beforeCreate()</code> 之后和 <code>created()</code> 之前执行，<br>Vue3 取消了这两个 2 版本的生命周期钩子函数，统一用 <code>setup()</code> 代替，该函数相当于一个生命周期函数，<br>Vue2 中的 <code>data</code>，<code>methods</code>，等全部都用对应的新增 API 写在 <code>setup()</code> 中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">setup(props, context) &#123;</span><br><span class="line">  </span><br><span class="line">  // context.refs</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>props</code> 用来接收 <code>props</code> 数据。</li>
+<li><code>context</code> 用来定义上下文，上下文对象中包含了一些属性，这些属性在 Vue2 中需要通过 <code>this</code> 才能访问到，但在 <code>setup()</code> 中无法访问到 <code>this</code></li>
+<li><code>return &#123;&#125;</code> 返回值，返回的是响应式数据。</li>
+</ul>
+<h3 id="reactive-函数"><a href="#reactive-函数" class="headerlink" title="reactive() 函数"></a>reactive() 函数</h3><p><code>reactive()</code> 创建响应式数据对象，在 <code>setup()</code> 中 <code>return</code> 出去，即可在 <code>template</code> 中使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt; &#123;&#123; info.name &#125;&#125; &lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123; defineComponent, reactive &#125; from &#x27;vue&#x27;</span><br><span class="line">  export default defineComponent(&#123;</span><br><span class="line">    setup(props, context) &#123;</span><br><span class="line">      const info = reactive(&#123;</span><br><span class="line">        name: &#x27;zzz&#x27;,</span><br><span class="line">        age: 18,</span><br><span class="line">      &#125;)</span><br><span class="line">      return info</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ref-函数"><a href="#ref-函数" class="headerlink" title="ref() 函数"></a>ref() 函数</h3><p><code>ref()</code> 用来创建一个响应式的数据对象，<code>ref()</code> 返回值是一个对象，这个对象上只包含一个 <code>value</code> 属性，<br>只在<code>setup()</code>函数内部获取 <code>ref()</code> 对象的值需要加上 <code>.value</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;app&quot;&gt;&#123;&#123; count &#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123; defineComponent, ref &#125; from &#x27;vue&#x27;</span><br><span class="line">  export default defineComponent(&#123;</span><br><span class="line">    setup() &#123;</span><br><span class="line">      const count = ref(10)</span><br><span class="line">      return &#123;</span><br><span class="line">        count,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>reactive()</code> 对象中访问 <code>ref()</code> 创建的响应式数据对象时，不需要加 <code>.value</code>。</p>
+<h3 id="isRef-函数"><a href="#isRef-函数" class="headerlink" title="isRef() 函数"></a>isRef() 函数</h3><p><code>isRef()</code> 用来判断某个值是否为 <code>ref()</code> 创建出来的对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; defineComponent, isRef, ref &#125; from &#x27;vue&#x27;</span><br><span class="line">export default defineComponent(&#123;</span><br><span class="line">  setup(props, context) &#123;</span><br><span class="line">    const age = ref(18)</span><br><span class="line">    console.log(isRef(age)) // true</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      age</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="toRefs-函数"><a href="#toRefs-函数" class="headerlink" title="toRefs() 函数"></a>toRefs() 函数</h3><p><code>toRefs()</code> 可以将 <code>reactive()</code> 创建出来的响应式对象，转换为普通的对象，这个普通对象上的每个属性节点，都是 <code>ref()</code> 类型的响应式数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;app&quot;&gt;&#123;&#123; name &#125;&#125; &#123;&#123; age &#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import &#123; defineComponent, reactive, ref, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line">  export default defineComponent(&#123;</span><br><span class="line">    setup(props, context) &#123;</span><br><span class="line">      const info = reactive(&#123;</span><br><span class="line">        name: &quot;你好&quot;,</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      const age = ref(18)</span><br><span class="line"></span><br><span class="line">      return &#123;</span><br><span class="line">        ...toRefs(info),</span><br><span class="line">        age,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="computed-函数"><a href="#computed-函数" class="headerlink" title="computed() 函数"></a>computed() 函数</h3><p><code>computed()</code> 用来创建计算属性，和前面一样，它返回的值是一个 <code>ref()</code> 对象。里面可以传方法，或者对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; computed, defineComponent, ref &#125; from &#x27;vue&#x27;</span><br><span class="line">export default defineComponent(&#123;</span><br><span class="line">  setup(props, context) &#123;</span><br><span class="line">    const age = ref(18)</span><br><span class="line"></span><br><span class="line">    // 根据age的值，创建一个响应式的计算属性ageComputed，根据依赖的ref自动计算并返回一个新的ref</span><br><span class="line">    const ageComputed = computed(() =&gt; age.value++) // 19</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      age,</span><br><span class="line">      ageComputed,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2023 camelliaQ<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
