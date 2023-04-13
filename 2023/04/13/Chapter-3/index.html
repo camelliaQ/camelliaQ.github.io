@@ -13,6 +13,12 @@
     
 
     
+        <meta name="description" content="项目提交Git流程Gitee 是一款功能强大的代码托管平台，可以帮助开发者存储和管理项目代码。
+安装git
+前往官网链接下载Gitee, 下载64位的即可 ———-&amp;gt; https://git-scm.com/download/win/
+
+下载之后安装， 一直点next最后点finish完成即可"/>
+    
 
     <!--Author-->
     
@@ -21,10 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="camelliaQ Blog"/>
+        <meta property="og:title" content="Git教程"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="项目提交Git流程Gitee 是一款功能强大的代码托管平台，可以帮助开发者存储和管理项目代码。
+安装git
+前往官网链接下载Gitee, 下载64位的即可 ———-&amp;gt; https://git-scm.com/download/win/
+
+下载之后安装， 一直点next最后点finish完成即可"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +44,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>归档 - camelliaQ Blog</title>
+    <title>Git教程 - camelliaQ Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -139,75 +151,106 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>归档</h1>
+                <div class="post-heading">
+                    <h1>Git教程</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-04-13
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2023/04/13/Chapter-3/">
-        <h1 class="post-title archive">
-            Git教程
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/04/12/Chapter-2/">
-        <h1 class="post-title archive">
-            JavaScript常见数组方法
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/04/11/Chapter-1/">
-        <h1 class="post-title archive">
-            快速掌握 Vue3 基础语法
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-04-11
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="项目提交Git流程"><a href="#项目提交Git流程" class="headerlink" title="项目提交Git流程"></a>项目提交Git流程</h2><p>Gitee 是一款功能强大的代码托管平台，可以帮助开发者存储和管理项目代码。</p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><ol>
+<li><p>前往官网链接下载<code>Gitee</code>, 下载64位的即可 ———-&gt; <a target="_blank" rel="noopener" href="https://git-scm.com/download/win/">https://git-scm.com/download/win/</a></p>
+</li>
+<li><p>下载之后安装， 一直点<code>next</code>最后点<code>finish</code>完成即可</p>
+</li>
+</ol>
+<h3 id="登录注册"><a href="#登录注册" class="headerlink" title="登录注册"></a>登录注册</h3><ol>
+<li><p>进入<code>Gitee</code>官网链接: <a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a> 注册账号</p>
+</li>
+<li><p>注册登录以后设置连接的邮箱，因为<code>git命令</code>连接时必须用到邮箱</p>
+</li>
+<li><p>创建空白文件夹作为本地仓库以存放项目</p>
+</li>
+<li><p>打开<code>Git Bash</code>，用命令进入本地仓库文件夹，右键菜单也会出现相应的菜单。</p>
+</li>
+<li><p>进入<code>Git Bash</code>后配置用户名和邮箱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global &#x27;user.name&#x27;   // 注册账号名</span><br><span class="line">git config --global &#x27;user.email&#x27;  //注册的邮箱</span><br></pre></td></tr></table></figure></li>
+<li><p>检查是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置远程仓库"><a href="#配置远程仓库" class="headerlink" title="配置远程仓库"></a>配置远程仓库</h3><ol>
+<li><p>在<code>gitee</code>中新建仓库, 仓库名字和路径自己设置</p>
+</li>
+<li><p>建好远程仓库之后，在之前本地创建的空白文件夹中，创建一个新的文件夹，作为本地仓库</p>
+</li>
+<li><p>进入创建的本地仓库中，在空白处右击选择<code>Git Bash Here</code></p>
+</li>
+<li><p>进入到该目录打开本地文件夹查看、显示、隐藏文件设置看到<code>.git文件</code>出现, <code>.git文件</code>是项目本地缓存区</p>
+</li>
+<li><p>使用<code>git add 文件名</code>  或者 <code>git add .</code>(提交所有文件)命令， 将所有文件提交到本地缓存区</p>
+</li>
+<li><p>将本地缓存内容提交到仓库， 使用<code>git commit -m &#39;提交备注信息&#39;</code>命令</p>
+</li>
+<li><p>链接仓库使用<code>git remote add origin 仓库ssh地址</code>命令链接仓库</p>
+</li>
+<li><p>然后推到远程git仓库主分支使用<code>git push -u origin master</code>， 就成功了</p>
+</li>
+</ol>
+<h3 id="Git常用语法"><a href="#Git常用语法" class="headerlink" title="Git常用语法"></a>Git常用语法</h3><ul>
+<li><code>git clone</code>  克隆项目到本地仓库</li>
+<li><code>git add</code>  将工作区的修改提交到暂存区</li>
+<li><code>git commit</code>  将暂存区的修改提交到当前分支</li>
+<li><code>git reset</code>  回退到某一个版本</li>
+<li><code>git pull</code>  从远程更新代码</li>
+<li><code>git push</code>  将本地代码更新到远程分支上</li>
+<li><code>git log</code>  查看提交历史</li>
 </ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
