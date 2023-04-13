@@ -21,11 +21,9 @@ article .container .row .video-container embed {
   margin-top: 0;
 }
 article .container .row blockquote {
-  font-style: italic;
   font-family: font-serif;
   font-size: 1.2em;
-  padding: 0 30px 15px;
-  text-align: center;
+  padding: 0 10px 5px 15px;
 }
 article .container .row blockquote footer {
   border-top: none;
@@ -54,7 +52,7 @@ article .container .row .pullquote.left {
 figure.highlight {
   background: #eee;
   border: 1px solid color-border;
-  margin-top: 15px;
+  margin: 15px 0;
   padding: 7px 15px;
   border-radius: 2px;
   text-shadow: 0 0 1px #fff;

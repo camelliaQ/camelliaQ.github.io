@@ -13,6 +13,13 @@
     
 
     
+        <meta name="description" content="常见数组方法添加元素
+添加一个元素到数组的最后位置 array.push(item)
+在数组首位插入一个元素 array.unshift(item)
+在指定索引位置插入元素 array.splice(index, 0, item)
+
+12345&amp;lt;!-- splice() 第二个参数为 0 时，"/>
+    
 
     <!--Author-->
     
@@ -25,6 +32,13 @@
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="常见数组方法添加元素
+添加一个元素到数组的最后位置 array.push(item)
+在数组首位插入一个元素 array.unshift(item)
+在指定索引位置插入元素 array.splice(index, 0, item)
+
+12345&amp;lt;!-- splice() 第二个参数为 0 时，"/>
     
 
     <!--Open Graph Site Name-->
@@ -175,7 +189,84 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <h1 id="常见数组方法"><a href="#常见数组方法" class="headerlink" title="常见数组方法"></a>常见数组方法</h1><h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><ol>
+<li>添加一个元素到数组的最后位置 <code>array.push(item)</code></li>
+<li>在数组首位插入一个元素 <code>array.unshift(item)</code></li>
+<li>在指定索引位置插入元素 <code>array.splice(index, 0, item)</code></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- splice() 第二个参数为 0 时，表示插入数据。 --&gt;</span><br><span class="line">let arr = [1, 2, 3, 4, 5]</span><br><span class="line">// 在 索引 0 的位置，插入 0</span><br><span class="line">arr.splice(0, 0, &#x27;0&#x27;)</span><br><span class="line">console.log(arr) //--&gt; [&#x27;0&#x27;, 1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><ol>
+<li>删除数组最后的元素 <code>array.pop(item)</code></li>
+<li>删除数组首位的元素 <code>array.shift(item)</code></li>
+<li>删除指定索引位置的元素 <code>array.splice(start, number)</code></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5]</span><br><span class="line">// 删除从索引 4 开始，2 个元素</span><br><span class="line">arr.splice(4, 2)</span><br><span class="line">console.log(arr) //--&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h3><ol>
+<li>修改指定索引位置的几个元素 array.splice(index, number, item)</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, 2, 3, 4, 5]</span><br><span class="line">// 修改 索引 1 的位置的元素为 11</span><br><span class="line">arr.splice(1, 1, &#x27;11&#x27;)</span><br><span class="line">console.log(arr) //--&gt; [1, 11, 3, 4, 5]</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环元素"><a href="#循环元素" class="headerlink" title="循环元素"></a>循环元素</h3><ol>
+<li><strong><code>for()</code></strong> for循环应该是最普遍的，使用最多的一种循环遍历方法了</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">for(let i = 0; i&lt;arr.length; i++)&#123;</span><br><span class="line">  console.log(arr[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong><code>forEach()</code></strong> 此方法用于循环遍历数组中的每个元素,并将元素传递给回调函数, <code>forEach()</code> 对空数组不执行</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const arr = [</span><br><span class="line">  &#123; id: 1, name: &#x27;小红&#x27; &#125;,</span><br><span class="line">  &#123; id: 2, name: &#x27;小黄&#x27; &#125;,</span><br><span class="line">  &#123; id: 3, name: &#x27;小绿&#x27; &#125;,</span><br><span class="line">]</span><br><span class="line">arr.forEach(item =&gt; console.log(item.name))  ------&gt; 输出： 小红，小黄，小绿</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong><code>map()</code></strong> 循环遍历数组中的每一个元素，并返回一个新数组，<code>map()</code> 对空数组不执行，不会改变原始数组</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">arr.map(item =&gt; item + item)    -------&gt; 输出：[2, 4, 6, 8, 10]</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong><code>filter()</code></strong> 在数组中过滤出符合条件的所有元素，并返回一个新数组。如果数组中没有符合条件的元素，则返回一个空数组。<code>filter()</code> 不改变数组的原始值</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const arr = [</span><br><span class="line">  &#123; id: 1, name: &#x27;小红&#x27; &#125;,</span><br><span class="line">  &#123; id: 2, name: &#x27;小黄&#x27; &#125;,</span><br><span class="line">  &#123; id: 3, name: &#x27;小绿&#x27; &#125;,</span><br><span class="line">]</span><br><span class="line">arr.filter(item =&gt; item.name === &#x27;小黄&#x27;)   -------&gt; 输出：&#123;id: 2, name: &#x27;小黄&#x27;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h3><ol>
+<li><strong><code>find()</code></strong> 在数组中查找并返回符合条件的元素。如果符合条件的元素有多个，那么只返回第一个元素。<br>如果没有符合条件的元素，则返回 <code>undefined</code>。<code>find()</code> 对空数组不执行；不改变数组的原始值。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const arr = [</span><br><span class="line">  &#123; id: 1, name: &#x27;小红&#x27; &#125;,</span><br><span class="line">  &#123; id: 2, name: &#x27;小黄&#x27; &#125;,</span><br><span class="line">  &#123; id: 3, name: &#x27;小绿&#x27; &#125;,</span><br><span class="line">]</span><br><span class="line">arr.find(item =&gt; item.id === 2)    -------&gt; 输出：&#123;id: 2, name: &#x27;小黄&#x27;&#125;</span><br><span class="line">arr.find(item =&gt; item.id === 4)    -------&gt; 输出：undefined</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong><code>findIndex()</code></strong> 在数组中查找并返回符合条件的元素的索引<code>（index）</code>。如果符合条件的元素有多个，那么只返回第一个元素的索引<code>（index）</code>。如果没有符合条件的元素，则返回 <code>-1</code>。<code>findIndex()</code> 对空数组不执行；不会改变数组的原始值。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const arr = [</span><br><span class="line">  &#123; id: 1, name: &#x27;小红&#x27; &#125;,</span><br><span class="line">  &#123; id: 2, name: &#x27;小黄&#x27; &#125;,</span><br><span class="line">  &#123; id: 3, name: &#x27;小绿&#x27; &#125;,</span><br><span class="line">]</span><br><span class="line">arr.findIndex(item =&gt; item.id === 3)    -------&gt; 输出：2</span><br><span class="line">arr.findIndex(item =&gt; item.id === 4)    -------&gt; 输出：-1</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong><code>includes()</code></strong> 此方法用于判断数组中是否包含指定的值，如果有返回 <code>true</code>，否则返回 <code>false</code>。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">arr.includes(3)    -------&gt; 输出：true</span><br><span class="line">arr.includes(6)    -------&gt; 输出：false</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong><code>some()</code></strong> 在数组内判断是否有符合条件的元素，只要有一个元素符合条件，则返回 <code>true</code>，否则返回 <code>false</code>。<code>some()</code> 对空数组不执行；不改变数组的原始值。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">arr.some(item =&gt; item === 1)    -------&gt; 输出：true</span><br><span class="line">arr.some(item =&gt; item === 6)    -------&gt; 输出：false</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong><code>every()</code></strong> 在数组内判断每一个元素是否都符合匹配条件，如果是，返回<code>true</code>，反之则返回 <code>false</code>。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [1, 1, 1, 1, 1]</span><br><span class="line">arr1.every(item =&gt; item === 1)    -------&gt; 输出：true</span><br><span class="line"></span><br><span class="line">const arr2 = [1, 2, 3, 4, 5]</span><br><span class="line">arr2.every(item =&gt; item === 2)    -------&gt; 输出：false</span><br></pre></td></tr></table></figure>
+
+<h3 id="排序元素"><a href="#排序元素" class="headerlink" title="排序元素"></a>排序元素</h3><ol>
+<li><strong><code>sort()</code></strong> 此方法对数组内的元素进行排序，并返回排序后的新数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr = [5, 4, 3, 2, 1]</span><br><span class="line">// 升序</span><br><span class="line">arr.sort((a, b) =&gt; a - b)    -------&gt; 输出：[1, 2, 3, 4, 5]</span><br><span class="line">// 降序</span><br><span class="line">arr.sort((a, b) =&gt; b - a)    -------&gt; 输出：[5, 4, 3, 2, 1]</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组合并"><a href="#数组合并" class="headerlink" title="数组合并"></a>数组合并</h3><ol>
+<li><strong><code>concat()</code></strong> 此方法用于合并两个或多个数组，它不会改变现有的数组，返回的是多个数组合并后一个新数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const arr1 = [1, 2, 3, 4, 5]</span><br><span class="line">const arr2 = [6, 7, 8, 9, 10]</span><br><span class="line">arr1.concat(arr2)             -------&gt; 输出：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组反转"><a href="#数组反转" class="headerlink" title="数组反转"></a>数组反转</h3><ol>
+<li><strong><code>reverse()</code></strong> 此方法用于反转数组中元素的顺序，使第一个元素成为最后一个，最后一个元素成为第一个。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">arr.reverse()     -------&gt; 输出：[5, 4, 3, 2, 1]</span><br></pre></td></tr></table></figure>
 
                 
             </div>
